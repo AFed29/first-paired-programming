@@ -42,14 +42,16 @@ def number_to_full_month_name(month_number)
 end
 
 def number_to_short_month_name(month_number)
-  case month_number
-  when 1
-    return "Jan"
-  when 3
-    return "Mar"
-  when 9
-    return "Sep"
-  end
+  sliced_month_name = number_to_full_month_name(month_number).slice(0, 3)
+  return sliced_month_name
+  # case month_number
+  # when 1
+  #   return "Jan"
+  # when 3
+  #   return "Mar"
+  # when 9
+  #   return "Sep"
+  # end
 end
 
 def volume_of_cube(x)
